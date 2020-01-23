@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exo1 redimension</title>
+	<meta charset="utf-8">
+</head>
+<body>
+  
+  <section>
+   <div>
+   	  <p  id="exo1" onclick="return redimensionner();" style="font-size: 20px;">Bienvenu sur ma page avec du javascript</p>
+   	  <button id="bouton1" onclick="return button1();">bouton1</button>
+   	  <button id="bouton2" onclick="return button2();">bouton2</button>
+   	  <button id="bouton3" onclick="return button3();">bouton3</button>
+   	  <button id="bouton4" onclick="return button4();">bouton4</button>
+   	  <button id="bouton5" onclick="return button5();">bouton5</button>
+   </div>
+   <div id="rectangle" style="height: 100px; width: 100px; background:blue; margin-top: 20px;"></div>
+   </section>
+   <script type="text/javascript">
+            
+   	  function redimensionner(){
+   	  	var phrase = document.getElementById("exo1");
+
+   	  	if (phrase.style.fontSize=='20px'){
+   	  		phrase.style.fontSize= '60px';
+   	  	}
+   	  	else{
+   	  		phrase.style.fontSize= '20px';
+   	  	}  	  	
+   	  }
+        var hauteur=100;
+   	  function button1(){
+   	  	var forme= document.getElementById("rectangle");
+   	  	  if (hauteur<=300) {
+   	  	  	hauteur+=50;
+   	  		 forme.style.height=hauteur+ 'px'; 	  		
+   	     }
+	  else{
+	  	    forme.style.height='100px';
+	      }
+
+      }
+      function button2(){
+      	  document.getElementById("rectangle").style.background= 'green';
+      }
+      function button3(){
+      	  document.getElementById("rectangle").style.background= 'blue';
+      }
+      function button4(){
+      	  document.getElementById("rectangle").style.display = 'none';
+      }
+      function button5(){
+      	  document.getElementById("rectangle").style.display = 'block';
+      }
+     
+   </script>
+
+</body>
+</html>
